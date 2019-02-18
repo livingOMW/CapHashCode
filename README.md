@@ -1,2 +1,2 @@
 # CapHashCode
-Capgemini Hash Code
+Google Hash Code
