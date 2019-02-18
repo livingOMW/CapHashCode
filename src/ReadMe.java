@@ -9,7 +9,7 @@ public class ReadMe {
 	BufferedReader reader;
 	try {
 		reader = new BufferedReader(new FileReader(
-				"C:\\Users\\Oleg\\Desktop\\Eclipse J2EE-workspace\\PizzaReader\\c_medium.in"));
+				"C:\\Users\\Oleg\\Desktop\\Eclipse J2EE-workspace\\PizzaReader\\b_small.in"));
 		String line = reader.readLine();
 		int lineN = 0;
 		int rows = 0;
@@ -43,11 +43,4 @@ public class ReadMe {
 		e.printStackTrace();
 	}
 }
-	  
-	  
-
-	
-	 
-	  
-
 }
