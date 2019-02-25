@@ -13,7 +13,7 @@ public class cutBigPizzaOleg {
 	BufferedReader reader;
 	try {
 		reader = new BufferedReader(new FileReader(
-				"C:\\Users\\Oleg\\Desktop\\Eclipse J2EE-workspace\\PizzaReader\\d_big.in"));
+				"//Users//oleg//git//CapHashCode//d_big.in"));
 		String line = reader.readLine();
 		int lineN = 0;
 		int rows = 0;
@@ -54,20 +54,20 @@ public class cutBigPizzaOleg {
 
 		ArrayList<int[]> respuestas = respuestasValidas(patron1,matriz);
 		
-//	      PrintWriter escribir=new PrintWriter("pizzaCortada.txt");
+	      PrintWriter escribir=new PrintWriter("pizzaCortada.txt");
 	       
 	    
-//	      escribir.println(respuestas.size());
+	      escribir.println(respuestas.size());
 	
 		for (int i = 0; i < respuestas.size(); i++) {
 			for (int j = 0; j < respuestas.get(i).length; j++) {
-				System.out.print(respuestas.get(i)[j]+" ");
-				//escribir.print(respuestas.get(i)[j]+" ");
+				//System.out.print(respuestas.get(i)[j]+" ");
+				escribir.print(respuestas.get(i)[j]+" ");
 			}
-//			escribir.println();
-		System.out.println();
+			escribir.println();
+		//System.out.println();
 		}
-//		  escribir.close();
+		  escribir.close();
 		reader.close();		
 	} catch (IOException e) {
 		e.printStackTrace();
@@ -88,9 +88,9 @@ public class cutBigPizzaOleg {
 				//si me vale el patron posicionV le sumo todas las posiciones del patron
 				if(validarPatron(patron,matriz,posicionH,posicionV)) {
 					patronesValidos++;
-					int[] respuestas2={posicionV,posicionH,posicionV,posicionH+patron[1]};
+					int[] respuestas2={posicionV,posicionH,posicionV,posicionH+patron[1]-1};
 					//sumamos la posicion vertical
-					posicionH+=patron[1]+1;
+					posicionH+=patron[1];
 					respuestas.add(respuestas2);
 				}
 				else {
