@@ -185,18 +185,20 @@ public class Utils {
 		}
 		//Big pizza
 		if(numIngredients == 6 && maxSize== 14) {
-			list.add(new Point(0,13));
-			list.add(new Point(0,12));
+			//list.add(new Point(0,13));
+			//list.add(new Point(0,12));
 			//list.add(new Point(0,11));
 			//list.add(new Point(1,6));
-			list.add(new Point(1,5));
-			list.add(new Point(13,0));
-			list.add(new Point(12,0));
+			
+			//list.add(new Point(1,5));
+			//list.add(new Point(13,0));
+			
+			//list.add(new Point(12,0));
 			//list.add(new Point(11,0));
 			//list.add(new Point(6,1));
-			list.add(new Point(5,1));
-			//list.add(new Point(3,2));
-			//list.add(new Point(2,3));
+			//list.add(new Point(5,1));
+			list.add(new Point(3,2));
+			list.add(new Point(2,3));
 		}
 		return list;
 	}

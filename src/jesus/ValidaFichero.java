@@ -13,7 +13,7 @@ public class ValidaFichero {
 		BufferedReader reader;
 		try {
 			reader = new BufferedReader(new FileReader(//b_small.in//c_medium.in//d_big.in
-					"/Users/Jesus/Downloads/Soluciones validas Mediana/c_medium.out"));
+					"/Users/Jesus/Downloads/c_medium 46313.out"));
 			String line = reader.readLine();
 			while (line != null) {
 				//read first line to take args

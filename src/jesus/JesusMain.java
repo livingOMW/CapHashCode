@@ -14,7 +14,7 @@ public class JesusMain {
 		BufferedReader reader;
 		try {
 			reader = new BufferedReader(new FileReader(//b_small.in//c_medium.in//d_big.in
-					"/Users/Jesus/Downloads/c_medium.in"));
+					"/Users/Jesus/Downloads/d_big.in"));
 			String line = reader.readLine();
 			int lineN = 0;
 			int rows = 0;
@@ -132,13 +132,12 @@ public class JesusMain {
 					int prevValue = Utils.evaluateSliceListByAreasTopLeft(existingSolution, bigSlice);
 					
 					Utils.bestSliceSolutionForPortionKeyPoints(bigSlice, slices, existingSolution, bestSolutionFound,  numIngredients, 
-							maxSize, matriz, x*x, blankSlice, prevValue, new Date(),90);
+							maxSize, matriz, x*x, blankSlice, prevValue, new Date(),1);
 					
 					System.out.println(Utils.actualSolution);
 					System.out.println("Cuyo score es:"+ Utils.evaluateSliceListByAreasBottomRight(Utils.actualSolution, bigSlice));
 					
 					if(Utils.validSliceSolution(solution, numIngredients, maxSize, matriz)){
-						//Utils.writeFile("/Users/Jesus/Downloads/c_medium.out", solution);
 						System.out.println(j+","+i+"-->Es valido!!" + new Date());
 						listaAcumuladora[j][i]= Utils.actualSolution;
 					}else{
@@ -158,11 +157,11 @@ public class JesusMain {
 			if(Utils.validSliceSolution(finalSolution, numIngredients, maxSize, matriz)){
 				System.out.println("SOLUCION GENERAL VALIDA!!");
 				int valor = Utils.evaluateSliceListByAreasTotallyIncluded(finalSolution);
-				Utils.writeFile("/Users/Jesus/Downloads/c_medium "+valor+".out", finalSolution);
+				Utils.writeFile("/Users/Jesus/Downloads/d_big "+valor+".out", finalSolution);
 				System.out.println("SCORE->"+Utils.evaluateSliceListByAreasTotallyIncluded(finalSolution));
 			}else{
 				System.out.println("SOLUCION GENERAL NO VALIDA");
-				Utils.writeFile("/Users/Jesus/Downloads/c_mediumConError.out", finalSolution);
+				Utils.writeFile("/Users/Jesus/Downloads/d_bigConErrorMartes.out", finalSolution);
 			}
 					
 		} catch (IOException e) {
