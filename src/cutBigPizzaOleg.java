@@ -48,21 +48,36 @@ public class cutBigPizzaOleg {
 		int [] patron5 = {3,4};
 		int [] patron6 = {4,3};
 		int [] patron7 = {2,6};
-		int [] patron8 = {2,7};
+		int [] patron8 = {7,2};
 		int [] patron9 = {14,1};
 		int [] patron10 = {12,1};
-
-		ArrayList<int[]> respuestas = respuestasValidas(patron1,matriz);
+		int [] patron11 = {1,13};
+		int [] patron12 = {13,1};
 		
-	      PrintWriter escribir=new PrintWriter("pizzaCortada.txt");
+		ArrayList<int[]> respuestas = respuestasValidas(patron9,matriz);
+		
+	     PrintWriter escribir=new PrintWriter("pizzaCortada.txt");
 	       
 	    
-	      escribir.println(respuestas.size());
+	     escribir.println(respuestas.size());
 	
 		for (int i = 0; i < respuestas.size(); i++) {
+			int aux = 0;
 			for (int j = 0; j < respuestas.get(i).length; j++) {
-				//System.out.print(respuestas.get(i)[j]+" ");
-				escribir.print(respuestas.get(i)[j]+" ");
+				if(j==1) {
+					if(respuestas.get(i)[j]==987 || respuestas.get(i)[j]==988) {
+						aux=999;
+					}
+				}
+				if(j==3 && aux==999)
+				{
+				escribir.print(aux+" ");
+				}
+				else {
+					//System.out.print(respuestas.get(i)[j]+" ");
+				escribir.print(respuestas.get(i)[j]+" ");	
+				}
+
 			}
 			escribir.println();
 		//System.out.println();
@@ -88,7 +103,7 @@ public class cutBigPizzaOleg {
 				//si me vale el patron posicionV le sumo todas las posiciones del patron
 				if(validarPatron(patron,matriz,posicionH,posicionV)) {
 					patronesValidos++;
-					int[] respuestas2={posicionV,posicionH,posicionV,posicionH+patron[1]-1};
+					int [] respuestas2={posicionV,posicionH,posicionV,posicionH+patron[1]-1};
 					//sumamos la posicion vertical
 					posicionH+=patron[1];
 					respuestas.add(respuestas2);
